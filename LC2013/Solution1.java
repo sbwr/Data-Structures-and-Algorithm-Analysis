@@ -1,6 +1,6 @@
-package q2013;
+package LC2013;
 
-class Solution {
+class Solution1 {
     private int trapin1(int[] height, int i){
         int n,m,lmax = 0, rmax = 0;
         // search for right max
@@ -31,7 +31,7 @@ class Solution {
     }
     public static void main(String arg[]){
         int[] height = {2, 0, 2};
-        Solution s = new Solution();
+        Solution1 s = new Solution1();
         System.out.println(s.trap(height));
     }
 }

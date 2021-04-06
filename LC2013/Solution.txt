@@ -1,4 +1,4 @@
-Solution1
+Solution1 passed
 Process
     search for right max and left max for every grid
 
@@ -10,4 +10,25 @@ Process
 Complexity
     traverse every grid twice, also traverse in searching max nums
     O(n^2)
-    
+
+Solution2 failed
+Process
+    traverse every level(height = 0 -> max) of the map until no "wall"(black blocks)
+
+    start to count water blanks when meeting the first wall, end when meeting the last
+    (how to set the end condition??)
+
+    add total blanks of all levels up
+
+Complexity
+    maxheight * lengthn
+    O(n) when n >> height
+
+Solution3(improved version of Solution2)
+Process
+    count the total black and blue 
+
+    blue = total - black
+
+Complexity
+    O(n)
