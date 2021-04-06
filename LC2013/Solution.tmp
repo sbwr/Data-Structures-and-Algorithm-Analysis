@@ -15,7 +15,7 @@ class Solution {
         else{
             n = lmax - height[i];
             m = rmax - height[i];
-        }
+        }// water trap in 1 the minimum of left max and right max
         int min = n > m ? m : n;
         if(min < 0)return 0;
         else return min;
