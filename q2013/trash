@@ -1,0 +1,40 @@
+// class Solution {
+//     private int min(int[] height, int i){
+//         int n,m;
+//         if(i == 0 || i == height.length - 1)return 0;
+//         else{
+//             n = height[i] - height[i-1];
+//             m = height[i] - height[i+1];
+//         }
+//         int min = n > m ? m : n;
+//         if(min < 0)return 0;
+//         else return min;
+//     }
+//     public int trap(int[] height) {
+//         int len = height.length;
+//         // int[] trap = new int[len];
+//         int trap = 0;
+//         for(int i = 1; i < len; i++){
+//             trap += min(height, i);
+//         }
+//         return trap;
+//     }
+// }
+
+class Solution {
+    // find the max 2 nums in h[] between a & b
+    // return their indexes
+    public int[] max2(int[] height, int a, int b) {
+        int[] max = new int[2];
+        HashSet sort = new HashSet<Integer>();
+        return max;
+    }
+    public int trap1(int[] height, int a, int b) {// height数组在a，b区间内的储水量
+        int[] max = max(height, a, b);
+        max[0]
+    }
+    public int trap(int[] height) {
+        int len = height.length;
+        trap1(height, 0, len-1);
+    }
+}
