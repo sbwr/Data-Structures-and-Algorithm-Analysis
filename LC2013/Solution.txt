@@ -1,1 +1,13 @@
-1. 
+Solution1
+Process
+    search for right max and left max for every grid
+
+    use the minimum of 2 max nums to minus the depth of every grid
+    to get water traped in width 1
+
+    add all grids' results up
+
+Complexity
+    traverse every grid twice, also traverse in searching max nums
+    O(n^2)
+    
