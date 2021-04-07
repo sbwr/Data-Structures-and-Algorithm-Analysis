@@ -26,9 +26,10 @@ Complexity
 
 Solution3(improved version of Solution2)
 Process
-    count the total black and blue 
+    count the sum grid covered by wall and water:
+        use two pointers named left & right to search left and right border for each layer
 
-    blue = total - black
+    water = sum - wall
 
 Complexity
     O(n)
