@@ -1,4 +1,4 @@
-package LC2013;
+package LC42;
 
 class Solution1 {
     private int trapin1(int[] height, int i){

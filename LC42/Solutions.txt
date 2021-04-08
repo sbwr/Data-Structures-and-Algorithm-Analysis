@@ -33,3 +33,13 @@ Process
 
 Complexity
     O(n)
+
+Solution4  dynamic planning
+Process
+    traverse and save leftmax and rightmax of every grid respectively
+
+    traverse every grid using:
+        water += Math.min(leftmax, rightmax) - height[this grid]
+
+Complexity
+    O(n)

@@ -1,4 +1,4 @@
-package LC2013;
+package LC42;
 
 public class Solution3 {
     public int trap(int[] height) {
