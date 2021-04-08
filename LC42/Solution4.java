@@ -1,6 +1,6 @@
 package LC42;
 
-class Solution {
+class Solution4 {
     public int trap(int[] height) {
         int len = height.length, water = 0, tmp;
         int[] leftmax = new int[len], rightmax = new int[len];
@@ -8,7 +8,7 @@ class Solution {
         leftmax[0] = 0;
         rightmax[len-1] = 0;
 
-        //traverse to get all leftmax nums
+        //traverse to get all leftmax nums & rightmax nums
         for(int i = 1; i < len - 1; i ++) {
             leftmax[i] = Math.max(leftmax[i-1], height[i-1]);
             rightmax[len - 1 - i] = Math.max(rightmax[len - i], height[len - i]);
@@ -23,7 +23,7 @@ class Solution {
     }
     public static void main(String arg[]){
         int[] height = {0,1,0,2,1,0,1};
-        Solution s = new Solution();
+        Solution4 s = new Solution4();
         System.out.println(s.trap(height));
     }
 }
