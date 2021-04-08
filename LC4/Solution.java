@@ -10,24 +10,20 @@ class Solution {
             if(i >= n && j < m){
                 nums[k%2] = nums2[j];
                 j++;
-                k++;
             }
             else if(j >= m && i < n){
                 nums[k%2] = nums1[i];
                 i++;
-                k++;
             }else{
                 if(nums1[i] < nums2[j]){
                     nums[k%2] = nums1[i];
                     i++;
-                    k++;
                 }
                 else{
                     nums[k%2] = nums2[j];
                     j++;
-                    k++;
                 }
-            }
+            } k++;
         }
             
         if((n + m) % 2 == 1){
