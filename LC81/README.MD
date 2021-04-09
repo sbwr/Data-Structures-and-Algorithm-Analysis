@@ -18,9 +18,9 @@
 * 提示：
 
 1 <= nums.length <= 5000
--104 <= nums[i] <= 104
+-10e4 <= nums[i] <= 10e4
 题目数据保证 nums 在预先未知的某个下标上进行了旋转
--104 <= target <= 104
+-10e4 <= target <= 10e4
  
 
 * 进阶：
@@ -30,3 +30,10 @@
 
 来源：力扣（LeetCode）
 链接：https://leetcode-cn.com/problems/search-in-rotated-sorted-array-ii
+
+## 思路
+以LC33为基础，若遇到start、mid、end三者出现相等的情况，则分别自增或自减。
+核心过程为：
+    (0, len-1)内二分查找；
+    {若有序区间(start, mid)内有target或有序区间(mid, end)内无target：继续在(start, mid-1)内二分查找；反之在(mid-1, end)内继续二分查找。} 循环
+    直到start, mid或end命中target，或start、end相遇时结束循环。
