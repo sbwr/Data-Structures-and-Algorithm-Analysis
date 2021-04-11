@@ -1,0 +1,16 @@
+    // 跳到长度0的位置则失败
+    // 跳到位置i则必能跳到(0, i)中的所有位置
+    // 永远往最远的格子跳，到头成功；若出现0则后退一格，直到退到0则失败
+    // bug: 死循环 后退<->回到0格 --- 解决思路:设置k计数后退步数,若回到nums[i]=0处则k++
+    public boolean canJump(int[] nums) { 
+        int i = 0, len = nums.length, k = 1;
+        while(i < len-1){ //没到头继续跳
+            if(nums[i] == 0){ //出现0后退
+                if(i==0)return false;
+                else i -= k;
+            }
+            else {i += nums[i];} //没出现0，跳
+        }
+        // if(i >= len-1) 
+        return true; //到头成功
+    }
