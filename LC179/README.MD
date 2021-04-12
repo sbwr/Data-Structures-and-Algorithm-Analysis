@@ -49,3 +49,17 @@ https://leetcode-cn.com/problems/largest-number/
 
 ## 总结
 * 极好的Collection, StringBuilder学习素材
+
+* Collection.sort()介绍：
+1. Collection类中的声明：void java.util.Collections.sort(List<String> list, Comparator<? super String> c)，两个参数分别为排列对象和Comparator类型的对象。
+此代码中第二个参数使用lambda表达式表示的匿名方法。
+
+2. Lambda表达式：
+    (a,b)->{ return (b+a).compareTo(a+b); }
+其等价于匿名类：
+    Collections.sort(numsAL, new Comparator<String>(){
+        @Override
+        public int compare(String a, String b) {
+            return (b+a).compareTo(a+b);
+        }
+    });
