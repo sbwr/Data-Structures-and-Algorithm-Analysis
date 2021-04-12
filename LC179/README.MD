@@ -33,11 +33,19 @@ https://leetcode-cn.com/problems/largest-number/
 越大的‘一位数字’放于越前，多位数仅看首位；
 若有首位相同的多个数字，如[3, 30, 34]：下一位最大的放最前。
 
-* 对于字符串的处理、排序，优先考虑Java集合类。compareto()恰好契合按位比较的需求
+* 对于很多字符串的处理、排序，优先考虑Java集合类。compareto()恰好契合按位比较的需求
 
 ## 过程
-1. nums[] -> Collection<String> numsS[]
-2. 
+1. nums[] -> ArrayList<String> numsAL[]
+2. 使用Collection.sort()对numsAL排序
+3. 将排序结果输出为一个字符串
 
-## bug
-[0,0] -> 00    expected to be '0'
+## bugs
+* return numsAL.toString(); // will get String[] by this mean
+不能直接将ArrayList类型转换为单个字符串，应使用.get()方法逐个获取集合内容。
+
+* bug: [0,0] -> 00    expected to be '0'
+若输入中有且只有多个0，输出应为'0'，需要单独处理。
+
+## 总结
+* 极好的Collection, StringBuilder学习素材
