@@ -9,8 +9,6 @@ class Trie {
         children = new Trie[26]; // 用0-25表示a-z
         isEnd = false;
     }
-    
-    
 
     /** Inserts a word into the trie. */
     public void insert(String word) {
