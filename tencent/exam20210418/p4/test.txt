@@ -1,0 +1,17 @@
+8
+aaaaaaaabbbbbbbb
+bbbbbbbbaaaaaaaa
+ababababaaabababababab
+ababababababababababaa
+aaabbb
+bbbaaa
+cba
+abc
+aaba
+abaa
+aabb
+abab
+aaabbb
+bbbaaa
+cba
+abc
