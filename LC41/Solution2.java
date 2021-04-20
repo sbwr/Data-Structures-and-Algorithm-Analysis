@@ -1,7 +1,7 @@
 package LC41;
 
 import java.util.HashMap;
-// 正经哈希表
+// 普通哈希表
 class Solution2 {
     public int firstMissingPositive(int[] nums) {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
