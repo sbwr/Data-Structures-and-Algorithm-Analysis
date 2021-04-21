@@ -1,45 +1,15 @@
 package LC123;
 
 class Solution {
-    // 利用动态规划计算所有需要考虑的单次买卖的情况。
-    // 参数为股票价格 length>=2;
-    // 返回[2][length-1]数组
-    // 第一行第i+1列(即0,i位置)表示[0, i+1]区间（前区间）内单次交易最大结果；
-    // 第二行第i+1列(1,i位置)表示[i, length-1]区间（后区间）内单次交易最大结果.
-    private int[][] Single(int[] prices){
-        int len = prices.length;
-        int[][] profit = new int[2][len-1];
-        int max = 0;
-        // 前区间[0, i]
-        for(int i = 1; i <= len-1; i++){
-            // max = 0; // 删去，max不应归0，而应该不断记忆上一个计算结果以实现bp。
-            for(int j = 0; j < i; j++){
-                int thisprofit = prices[i] - prices[j];
-                max = Math.max(max, thisprofit);
-            }
-            profit[0][i-1] = max;
-        }
-        // 从后往前求后区间
-        max = 0;
-        for(int i = len-2; i >= 0; i--){
-            for(int j = len-1; j > i; j--){
-                int thisprofit = prices[j] - prices[i];
-                max = Math.max(max, thisprofit);
-            }
-            profit[1][i] = max;
-        }
-        return profit;
-    }
-
     public int maxProfit(int[] prices) {
-        int max = 0, len = prices.length - 1;
-        if(len < 0) return 0; // 单独考虑0个数情况
-        int[][] profit = Single(prices);
-        if(len == 1) return profit[0][0];// bug修复
-        for (int i = 0; i < len-1; i ++) {
-            max = Math.max(max, profit[0][i] + profit[1][i+1]);
+        int buy1 = prices[0], sell1 = 0, buy2 = prices[0], sell2 = 0;
+        for (int i : prices) {
+            buy1 = Math.min(buy1, i); // buy1的物理意义为第一次买花的钱
+            sell1 = Math.max(sell1, i - buy1); // sell1的物理意义为第一次卖时赚的钱
+            buy2 = Math.min(buy2, i - sell1); // buy2为第二次买时累计花的钱（赚的钱的相反数）
+            sell2 = Math.max(sell2, i - buy2); // sell2为第二次卖时累计赚的钱
         }
-        return max;
+        return Math.max(sell1, sell2);
     }
     public static void main(String[] args) {
         Solution s = new Solution();
