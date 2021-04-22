@@ -1,5 +1,5 @@
 package BackPack.BP1;
-
+// 逻辑与Main1 中的 maxValue() 方法相同，区别在使用ArrayList存储，适合大数据量。
 import java.util.Scanner;
 import java.util.ArrayList;
 public class Main{

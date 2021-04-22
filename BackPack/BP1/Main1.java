@@ -12,7 +12,7 @@ public class Main1 {
             w[i] = in.nextInt();
         }
         in.close();
-        System.out.println(maxValue(N, V, v, w));
+        System.out.println(maxValue2(N, V, v, w));
     }
     private static int maxValue(int N, int V, int[] v, int[] w){
         if (N == 0 || V == 0) return 0;
