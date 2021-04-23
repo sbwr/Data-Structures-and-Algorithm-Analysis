@@ -12,7 +12,7 @@ public class Main {
             w[i] = in.nextInt();
         }
         in.close();
-        System.out.println(maxValue(N, V, v, w));
+        System.out.println(maxValue2(N, V, v, w));
     }
     private static int maxValue(int N, int V, int[] v, int[] w) {
         if (N == 0 || V == 0) return 0;
@@ -29,4 +29,15 @@ public class Main {
         }
         return dp[N][V];
     }
+    private static int maxValue2(int N, int V, int[] v, int[] w){
+        if (N == 0 || V == 0) return 0;
+        int[] dp = new int[V+1];
+        for (int i = 0; i < N; i++){ // 外循环从0开始递增
+            for (int j = v[i]; j<= V; j++){ //内循环从v[i]开始递增
+                dp[j] = Math.max(dp[j], dp[j-v[i]] + w[i]);
+            }
+        }
+        return dp[V];
+    }
+
 }
