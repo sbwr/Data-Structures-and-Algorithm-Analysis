@@ -1,3 +1,5 @@
+package LC1011;
+
 
 public class Main {
     // 测试样例

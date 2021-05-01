@@ -1,3 +1,5 @@
+package LC1011;
+
 class Solution {
     public int shipWithinDays(int[] weights, int D) {
         int min = 0, max = 0;   // 二分查找上下限

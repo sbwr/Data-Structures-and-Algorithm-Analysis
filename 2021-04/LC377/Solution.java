@@ -1,3 +1,5 @@
+package LC377;
+
 public class Solution {
     public int combinationSum4(int[] nums, int target) {
         int N = nums.length;
