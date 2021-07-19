@@ -58,7 +58,6 @@ public class ChatSocket extends Thread {
 				ChatManager.getChatManager().publish_present(this, "driver login true");
 			}
 		}
-
 	}
 
 	public void driverlocation(String s) {

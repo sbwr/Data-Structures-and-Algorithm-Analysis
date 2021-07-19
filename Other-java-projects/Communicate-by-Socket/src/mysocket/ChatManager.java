@@ -29,7 +29,7 @@ public class ChatManager {
 		}
 	}
 
-	// 像当前线程发信息
+	// 向当前线程发信息
 	public void publish_present(ChatSocket cs, String out) {
 		cs.out(out + "\n");
 	}
