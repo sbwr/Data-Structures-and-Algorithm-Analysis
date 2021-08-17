@@ -7,8 +7,6 @@
 	],
 	"settings": {
 		"java.project.sourcePaths": [
-			"2021-05",
-			"2021-04",
 			"2021-07"
 		]
 	}
