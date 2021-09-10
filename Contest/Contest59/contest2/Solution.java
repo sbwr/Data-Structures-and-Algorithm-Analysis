@@ -1,4 +1,4 @@
-package biweeklyContest59.contest2;
+package Contest59.contest2;
 
 class Solution {
     public int countPaths(int n, int[][] roads) {

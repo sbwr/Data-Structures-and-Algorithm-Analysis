@@ -1,4 +1,4 @@
-package weeklyContest255.contest3;
+package Contest.Contest255.contest3;
 
 class Solution1 {
     public int minimizeTheDifference(int[][] mat, int target) {

@@ -1,4 +1,4 @@
-package weeklyContest255.contest1;
+package Contest.Contest255.contest1;
 
 class Solution {
     public int findGCD(int[] nums) {

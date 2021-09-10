@@ -1,4 +1,4 @@
-package weeklyContest255.contest2;
+package Contest.Contest255.contest2;
 
 import java.util.BitSet;
 
